@@ -549,10 +549,12 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- gaps
 beautiful.gap_single_client = true
-beautiful.useless_gap = 12
+beautiful.useless_gap = 10
 
 -- autostart
+awful.spawn.with_shell("killall polybar; killall nm-applet")
+
 awful.spawn.with_shell("picom")
-awful.spawn.with_shell("killall -q polybar; polybar petbar")
+awful.spawn.with_shell("polybar petbar")
+awful.spawn.with_shell("nm-connection-editor")
 awful.spawn.with_shell("feh --bg-fill ~/wallpapers/monterey-green.jpg")
-awful.spawn.with_shell("nm-applet")
