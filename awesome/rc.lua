@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 browser = "firefox"
@@ -197,6 +197,7 @@ awful.screen.connect_for_each_screen(function(s)
   }
 
   -- Create the wibox
+  -- ????
 end)
 -- }}}
 
@@ -549,12 +550,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- gaps
 beautiful.gap_single_client = true
-beautiful.useless_gap = 10
+--beautiful.useless_gap = 10
 
 -- autostart
-awful.spawn.with_shell("killall polybar; killall nm-applet")
-
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("polybar petbar")
-awful.spawn.with_shell("nm-connection-editor")
-awful.spawn.with_shell("feh --bg-fill ~/wallpapers/monterey-green.jpg")
+awful.spawn.with_shell("feh --bg-fill ~/wallpapers/bigsur-coastline.jpg &")
+awful.spawn.with_shell("killall polybar; polybar petbar")
+awful.spawn.with_shell("picom &")

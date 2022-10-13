@@ -1,4 +1,4 @@
-print('highlights loaded :P')
+--print('highlights loaded :P')
 
 local o = vim.opt
 
