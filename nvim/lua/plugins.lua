@@ -40,11 +40,11 @@ packer.startup(function(use)
   use 'akinsho/nvim-bufferline.lua'
 
   -- themes
+  use 'shaunsingh/nord.nvim'
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
-  use 'folke/tokyonight.nvim'
-  use 'haishanh/night-owl.vim'
-  use 'marko-cerovac/material.nvim'
+
+  use "petRUShka/vim-sage" -- sage for nvim
 end)

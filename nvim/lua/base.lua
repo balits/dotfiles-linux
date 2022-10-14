@@ -1,10 +1,13 @@
---print('base loaded:P')
+--print('base loaded:P')base
 vim.cmd('autocmd!')
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
+-- vim commands
+vim.cmd [[colorscheme nord]]
+vim.cmd [[set relativenumber]]
 
 -- shorthands
 local o = vim.o

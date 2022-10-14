@@ -10,6 +10,7 @@ lspconfig.setup {
   ensure_installed = {
     "sumneko_lua",
     "tailwindcss",
-    "gopls"
+    "gopls",
+    "python-language-server"
   }
 }
